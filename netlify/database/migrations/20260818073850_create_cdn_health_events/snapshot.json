@@ -1,0 +1,134 @@
+{
+  "version": "8",
+  "dialect": "postgres",
+  "id": "4be97b23-b4d5-4a62-85c9-951b5fac22a3",
+  "prevIds": [
+    "00000000-0000-0000-0000-000000000000"
+  ],
+  "ddl": [
+    {
+      "isRlsEnabled": false,
+      "name": "cdn_health_events",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "cdn_health_events"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "cdn_id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "cdn_health_events"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "cdn_name",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "cdn_health_events"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "outcome",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "cdn_health_events"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": false,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "reported_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "cdn_health_events"
+    },
+    {
+      "nameExplicit": true,
+      "columns": [
+        {
+          "value": "cdn_id",
+          "isExpression": false,
+          "asc": true,
+          "nullsFirst": false,
+          "opclass": null
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "with": "",
+      "method": "btree",
+      "concurrently": false,
+      "name": "cdn_health_events_cdn_idx",
+      "entityType": "indexes",
+      "schema": "public",
+      "table": "cdn_health_events"
+    },
+    {
+      "nameExplicit": true,
+      "columns": [
+        {
+          "value": "reported_at",
+          "isExpression": false,
+          "asc": true,
+          "nullsFirst": false,
+          "opclass": null
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "with": "",
+      "method": "btree",
+      "concurrently": false,
+      "name": "cdn_health_events_reported_idx",
+      "entityType": "indexes",
+      "schema": "public",
+      "table": "cdn_health_events"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "cdn_health_events_pkey",
+      "schema": "public",
+      "table": "cdn_health_events",
+      "entityType": "pks"
+    }
+  ],
+  "renames": []
+}
